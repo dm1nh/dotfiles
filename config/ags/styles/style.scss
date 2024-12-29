@@ -1,0 +1,204 @@
+@import "./palette";
+
+$font: JetBrainsMonoNL Nerd Font;
+$font-icon: Material Symbols Rounded;
+
+window.bar {
+  all: unset;
+  background: transparent;
+
+  button {
+    all: unset;
+  }
+
+  > centerbox {
+    min-height: 28px;
+    background: $bg_bar;
+  }
+
+  .workspaces {
+    margin-left: 6px;
+
+    .workspace-button {
+      all: unset;
+      min-width: 16px;
+      min-height: 16px;
+      border-radius: 50%;
+      background: $bg;
+      transition: 250ms background;
+    }
+
+    .workspace-button.focused,
+    .workspace-button.focused.occupied {
+      background: $accent;
+    }
+
+    .workspace-button.occupied {
+      background: $fg_gutter;
+    }
+  }
+
+  .focused-client {
+    color: $fg;
+
+    .client-app {
+      margin-left: 8px;
+      font-family: $font;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .volume {
+    color: $accent;
+
+    .volume-icon {
+      font-family: $font-icon;
+      font-size: 20px;
+    }
+
+    .volume-value {
+      margin-left: 8px;
+      font-family: $font;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .idle-inhibitor {
+    color: $accent;
+
+    .idle-inhibitor-icon {
+      font-family: $font-icon;
+      font-size: 18px;
+    }
+
+    .idle-inhibitor-label {
+      margin-left: 8px;
+      font-family: $font;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .clock {
+    margin-right: 6px;
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 900;
+    color: $fg;
+  }
+}
+
+window.NotificationPopups {
+  all: unset;
+}
+
+eventbox.Notification {
+  &:first-child > box {
+    margin-top: 1rem;
+  }
+
+  &:last-child > box {
+    margin-bottom: 1rem;
+  }
+
+  // eventboxes can not take margins so we style its inner box instead
+  > box {
+    min-width: 400px;
+    border-radius: 6px;
+    background-color: $bg;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    border: 1pt solid $fg_gutter;
+    font-family: $font;
+
+    button {
+      all: unset;
+    }
+  }
+
+  &.critical > box {
+    border: 1pt solid $red;
+
+    .header {
+      .app-name {
+        color: $red;
+      }
+
+      .app-icon {
+        color: $red;
+      }
+    }
+  }
+
+  .header {
+    padding: 0.5rem;
+    color: $comment;
+
+    .app-icon {
+      margin: 0 0.4rem;
+    }
+
+    .app-name {
+      margin-right: 0.3rem;
+      font-weight: bold;
+
+      &:first-child {
+        margin-left: 0.4rem;
+      }
+    }
+
+    .time {
+      margin: 0 0.4rem;
+    }
+  }
+
+  separator {
+    margin: 0 8px;
+    background-color: $fg_gutter;
+  }
+
+  .content {
+    margin: 16px;
+    margin-top: 8px;
+
+    .summary {
+      font-size: 18px;
+      font-weight: 600;
+      color: $fg;
+    }
+
+    .body {
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      color: $fg_dark;
+    }
+
+    .image {
+      margin-right: 0.5rem;
+      border-radius: 6px;
+      min-width: 64px;
+      min-height: 64px;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .actions {
+    margin: 16px;
+    margin-top: 0px;
+
+    button {
+      padding: 8px 0px;
+      font-weight: 600;
+      border-radius: 6px;
+      background: $bg;
+      transition: 250ms background;
+    }
+
+    button:hover {
+      background: $bg_highlight;
+    }
+  }
+}

@@ -12,7 +12,7 @@ set -l yellow dbbc7f
 set -l blue 7ba6d2
 set -l magenta d6a0d1
 set -l cyan 83c092
-set -l black 626a60
+set -l black 444a4f
 
 # Syntax Highlighting
 set -g fish_color_normal $fg

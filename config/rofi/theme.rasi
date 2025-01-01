@@ -23,6 +23,6 @@
 	blue:             #7ba6d2;
 	purple:           #ad85d7;
 	magenta:          #d6a0d1;
-	terminal-black:   #626a60;
-	comment:          #626a60;
+	terminal-black:   #444a4f;
+	comment:          #585f56;
 }

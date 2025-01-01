@@ -19,18 +19,18 @@ local palette = {
 	blue = "#7ba6d2",
 	purple = "#ad85d7",
 	magenta = "#d6a0d1",
-	comment = "#626a60",
+	terminal_black = "#444a4f",
+	comment = "#585f56",
 }
 
 util.bg = palette.bg
 util.fg = palette.fg
 
 palette.accent = palette.green
-palette.black = palette.comment
+palette.black = palette.terminal_black
 palette.border = palette.dark2
 palette.border_highlight = palette.accent
 
-palette.terminal_black = palette.black
 palette.terminal_black_bright = palette.terminal_black
 palette.terminal_red = palette.red
 palette.terminal_red_bright = util.brighten(palette.red)

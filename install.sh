@@ -4,20 +4,20 @@
 sudo pacman -S --noconfirm --needed base-devel git
 
 if ! which paru >/dev/null; then
-  sudo pacman -S --noconfirm --needed rustup
+	sudo pacman -S --noconfirm --needed rustup
 
-  # Install rustup toolchain
-  rustup install stable
-  rustup default stable
+	# Install rustup toolchain
+	rustup install stable
+	rustup default stable
 
-  sleep 1
+	sleep 1
 
-  # Install Paru
-  git clone https://aur.archlinux.org/paru.git
-  pushd paru
-  makepkg -si --noconfirm
-  popd
-  rm -rf paru
+	# Install Paru
+	git clone https://aur.archlinux.org/paru.git
+	pushd paru
+	makepkg -si --noconfirm
+	popd
+	rm -rf paru
 fi
 
 paru -Syy --noconfirm
@@ -33,7 +33,7 @@ xdg-user-dirs-update
 
 # Copy fonts
 
-cp -R ./fonts/{JetBrainsMonoNerdFont,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
+sudo cp -R ./fonts/{JetBrainsMonoNerdFont,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
 fc-cache -r
 
 # Install sddm astronaut theme
@@ -64,15 +64,8 @@ sudo rm -rf /usr/share/icons/default
 
 # pnpm
 if ! which pnpm >/dev/null; then
-  curl -fsSL https://get.pnpm.io/install.sh | sh -
+	curl -fsSL https://get.pnpm.io/install.sh | sh -
 fi
-
-# bun
-if ! which bun >/dev/null; then
-  curl -fsSL https://bun.sh/install | bash # for macOS, Linux, and WSL
-fi
-# fix ags cannot launch because it can find `bun` executable
-sudo ln -s ~/.bun/bin/bun /usr/bin/bun
 
 # Run Docker without sudo
 sudo usermod -aG docker $USER

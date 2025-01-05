@@ -22,7 +22,7 @@ fi
 
 paru -Syy --noconfirm
 paru -Sy --noconfirm archlinux-keyring
-paru -S --noconfirm - <./scriptdata/pkgs.txt
+paru -S --noconfirm - <./pkgs.txt
 
 # Enable services
 sudo systemctl enable sddm.service
@@ -32,10 +32,8 @@ sudo systemctl enable rfkill-block@bluetooth.service # turn off bluetooth on sta
 xdg-user-dirs-update
 
 # Copy fonts
-rm -rf ~/.local/share/{themes,fonts}
-mkdir -p ~/.local/share/{themes,fonts}
-cp -R ./fonts/{GalaxNerdFont,JetBrainsMonoNerdFont,MaterialSymbols,NotoColorEmoji-Regular.ttf} ~/.local/share/fonts/
-sudo cp -R ./fonts/Roboto /usr/share/fonts/
+
+cp -R ./fonts/{JetBrainsMonoNerdFont,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
 fc-cache -r
 
 # Install sddm astronaut theme
@@ -49,6 +47,8 @@ sudo cp ./config/hypr/wallpapers/greet.png /usr/share/sddm/themes/astronaut/
 sudo cp -r ./misc/modprobe.d /etc/
 
 # Install GTK themes
+rm -rf ~/.local/share/themes
+mkdir -p ~/.local/share/themes
 cp -r ./themes/Trop-Green-Dark-Medium ~/.local/share/themes/
 
 # Backup old configs

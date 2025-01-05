@@ -4,7 +4,6 @@ btop
 breeze-snow-cursor-theme
 calc
 clang
-code
 dart-sass
 docker
 docker-compose

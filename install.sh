@@ -4,20 +4,20 @@
 sudo pacman -S --noconfirm --needed base-devel git
 
 if ! which paru >/dev/null; then
-	sudo pacman -S --noconfirm --needed rustup
+  sudo pacman -S --noconfirm --needed rustup
 
-	# Install rustup toolchain
-	rustup install stable
-	rustup default stable
+  # Install rustup toolchain
+  rustup install stable
+  rustup default stable
 
-	sleep 1
+  sleep 1
 
-	# Install Paru
-	git clone https://aur.archlinux.org/paru.git
-	pushd paru
-	makepkg -si --noconfirm
-	popd
-	rm -rf paru
+  # Install Paru
+  git clone https://aur.archlinux.org/paru.git
+  pushd paru
+  makepkg -si --noconfirm
+  popd
+  rm -rf paru
 fi
 
 paru -Syy --noconfirm
@@ -32,7 +32,6 @@ sudo systemctl enable rfkill-block@bluetooth.service # turn off bluetooth on sta
 xdg-user-dirs-update
 
 # Copy fonts
-
 sudo cp -R ./fonts/{JetBrainsMonoNerdFont,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
 fc-cache -r
 
@@ -54,7 +53,9 @@ cp -r ./themes/Trop-Green-Dark-Medium ~/.local/share/themes/
 # Backup old configs
 mv ~/.config ~/.config.backup
 ln -s ~/.dots/config ~/.config
+
 # Copy common system configs
+sudo cp -R ./misc/xorg.conf.d /etc/X11/
 sudo cp -R ./misc/sddm.conf.d /etc/
 cp ./misc/.gitconfig ~/
 cp -R ./misc/.icons ~/
@@ -64,7 +65,7 @@ sudo rm -rf /usr/share/icons/default
 
 # pnpm
 if ! which pnpm >/dev/null; then
-	curl -fsSL https://get.pnpm.io/install.sh | sh -
+  curl -fsSL https://get.pnpm.io/install.sh | sh -
 fi
 
 # Run Docker without sudo

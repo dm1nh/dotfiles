@@ -1,6 +1,7 @@
 local templates = {
 	"ags",
 	"alacritty",
+	"awesome",
 	"btop",
 	"fish",
 	"foot",

@@ -1,0 +1,54 @@
+
+[font]
+size = 14
+
+[font.bold]
+family = "JetBrainsMonoNL Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMonoNL Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMonoNL Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMonoNL Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 2000
+multiplier = 3
+
+[terminal.shell]
+program = "/bin/fish"
+args = ["-l", "-c", "tmux"]
+
+[env]
+TERM = "alacritty"
+
+[window]
+dynamic_title = true
+title = "alacritty"
+
+[window.class]
+general = "alacritty"
+instance = "alacritty"
+
+[window.padding]
+x = 0
+y = 0
+
+[general]
+import = ["~/.config/alacritty/theme.toml"]
+
+[terminal]

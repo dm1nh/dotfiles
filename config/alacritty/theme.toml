@@ -1,0 +1,65 @@
+# Trop for Alacritty
+# ~/.config/alacritty/theme.toml
+
+[colors.cursor]
+cursor = "#e69875"
+text = "#23292e"
+
+[colors.footer_bar]
+background = "#d3c6aa"
+foreground = "#1e2428"
+
+[colors.hints.end]
+background = "#1a1f22"
+foreground = "#d3c6aa"
+
+[colors.hints.start]
+background = "#d3c6aa"
+foreground = "#1a1f22"
+
+[colors.line_indicator]
+background = "None"
+foreground = "None"
+
+[colors.bright]
+black = "#444a4f"
+blue = "#7fb4e9"
+cyan = "#71d48c"
+green = "#b8db7b"
+magenta = "#eaaae4"
+red = "#f78a8c"
+white = "#d3c6aa"
+yellow = "#f3c866"
+
+[colors.normal]
+black = "#444a4f"
+blue = "#7ba6d2"
+cyan = "#83c092"
+green = "#b2c98f"
+magenta = "#d6a0d1"
+red = "#e67e80"
+white = "#a99e88"
+yellow = "#dbbc7f"
+
+[colors.primary]
+background = "#23292e"
+bright_foreground = "#d3c6aa"
+dim_foreground = "#a99e88"
+foreground = "#d3c6aa"
+
+[colors.search.focused_match]
+background = "#b2c98f"
+foreground = "#23292e"
+
+[colors.search.matches]
+background = "#e67e80"
+foreground = "#23292e"
+
+[colors.selection]
+background = "#2a3137"
+text = "#d3c6aa"
+
+[colors.vi_mode_cursor]
+cursor = "#d3c6aa"
+text = "#23292e"
+    

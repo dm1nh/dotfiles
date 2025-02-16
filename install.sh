@@ -32,7 +32,7 @@ sudo systemctl enable rfkill-block@bluetooth.service # turn off bluetooth on sta
 xdg-user-dirs-update
 
 # Copy fonts
-sudo cp -R ./fonts/{JetBrainsMonoNerdFont,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
+sudo cp -R ./fonts/{JediNerdFont,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
 fc-cache -r
 
 # Install sddm astronaut theme
@@ -57,7 +57,7 @@ ln -s ~/.dots/config ~/.config
 # Copy common system configs
 sudo cp -R ./misc/xorg.conf.d /etc/X11/
 sudo cp -R ./misc/sddm.conf.d /etc/
-cp ./misc/.gitconfig ~/
+cp ./misc/{.gitconfig,.xprofile} ~/
 cp -R ./misc/.icons ~/
 
 # Remove default cursor theme

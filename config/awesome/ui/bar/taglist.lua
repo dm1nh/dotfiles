@@ -35,7 +35,7 @@ return function(s)
   local taglist = awful.widget.taglist({
     screen = s,
     filter = awful.widget.taglist.filter.all,
-    layout = { layout = wibox.layout.fixed.horizontal, spacing = beautiful.wibar_height / 2 },
+    layout = { layout = wibox.layout.fixed.horizontal, spacing = dpi(12) },
     widget_template = {
       widget = wibox.container.margin,
       create_callback = function(self, c3, _)
@@ -56,18 +56,18 @@ return function(s)
         if c3.selected then -- current focused tag
           self.widget.children[1].bg = beautiful.accent
         elseif #c3:clients() > 0 then -- occupied tag
-          self.widget.children[1].bg = beautiful.blue
+          self.widget.children[1].bg = beautiful.dark2
         else -- empty and no-focused tag
-          self.widget.children[1].bg = beautiful.fg_gutter
+          self.widget.children[1].bg = beautiful.bg_highlight
         end
       end,
       update_callback = function(self, c3, _)
         if c3.selected then -- current focused tag
           self.widget.children[1].bg = beautiful.accent
         elseif #c3:clients() > 0 then -- occupied tag
-          self.widget.children[1].bg = beautiful.blue
+          self.widget.children[1].bg = beautiful.dark2
         else -- empty and no-focused tag
-          self.widget.children[1].bg = beautiful.fg_gutter
+          self.widget.children[1].bg = beautiful.bg_highlight
         end
       end,
     },

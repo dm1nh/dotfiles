@@ -1,21 +1,21 @@
 
 [font]
-size = 14
+size = 15
 
 [font.bold]
-family = "JetBrainsMonoNL Nerd Font"
+family = "Jedi Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMonoNL Nerd Font"
+family = "Jedi Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMonoNL Nerd Font"
+family = "Jedi Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMonoNL Nerd Font"
+family = "Jedi Nerd Font"
 style = "Regular"
 
 [font.offset]

@@ -32,7 +32,7 @@ return function(s)
       bg = beautiful.bg_bar,
       {
         widget = wibox.container.margin,
-        margins = { left = dpi(4), right = dpi(4) },
+        margins = { left = dpi(6), right = dpi(6) },
         {
           widget = wibox.layout.align.horizontal,
           {

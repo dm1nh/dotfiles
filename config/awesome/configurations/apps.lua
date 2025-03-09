@@ -9,7 +9,7 @@ return {
     fterm = "alacritty --title fterm --class fterm",
     calculator = "alacritty --title calc --class calc -e calc",
     editor = "alacritty -e nvim",
-    web_browser = "firefox-developer-edition",
+    web_browser = "chromium",
     file_browser = "thunar",
     network_manager = "nm-connection-editor",
     bluetooth_manager = "blueman-manager",

@@ -16,6 +16,7 @@
 !/config/imv
 !/config/lutgen
 !/config/nvim
+!/config/nvim.backup
 !/config/rofi
 !/config/sddm-astronaut-theme
 !/config/tmux

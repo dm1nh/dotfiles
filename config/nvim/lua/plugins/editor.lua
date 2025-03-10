@@ -21,31 +21,29 @@ return {
       },
     },
   },
-  { -- https://github.com/lukas-reineke/indent-blankline.nvim
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    ---@module "ibl"
-    ---@type ibl.config
-    opts = {},
-  },
   { -- https://github.com/echasnovski/mini.comment
     "echasnovski/mini.comment",
     version = "*",
+    opts = {},
   },
   { -- https://github.com/echasnovski/mini.diff
     "echasnovski/mini.diff",
     version = "*",
+    opts = {
+      view = {
+        style = "sign",
+        signs = { add = "+", change = "~", delete = "-" },
+        -- Priority of used visualization extmarks
+        priority = 199,
+      },
+    },
   },
   { -- https://github.com/echasnovski/mini.files
     "echasnovski/mini.files",
     opts = {
       windows = {
         width_focus = 32,
-      },
-      options = {
-        -- Whether to use for editing directories
-        -- Disabled by default in LazyVim because neo-tree is used for that
-        use_as_default_explorer = false,
+        preview = false,
       },
     },
     keys = {
@@ -65,15 +63,19 @@ return {
       },
     },
     config = function(_, opts)
-      require("mini.files").setup(opts)
-
-      local show_dotfiles = true
-      local filter_show = function(fs_entry)
+      local hidden_by_default = { "node_modules", ".git", "build", "dist", ".build" }
+      local show_dotfiles = false
+      local filter_show = function()
         return true
       end
       local filter_hide = function(fs_entry)
-        return not vim.startswith(fs_entry.name, ".")
+        return not vim.startswith(fs_entry.name, ".") and not vim.tbl_contains(hidden_by_default, fs_entry.name)
       end
+
+      opts = vim.tbl_deep_extend("force", opts or {}, {
+        content = { filter = filter_hide },
+      })
+      require("mini.files").setup(opts)
 
       local toggle_dotfiles = function()
         show_dotfiles = not show_dotfiles
@@ -141,6 +143,7 @@ return {
   { -- https://github.com/echasnovski/mini.icons
     "echasnovski/mini.icons",
     version = "*",
+    opts = {},
   },
   { -- https://github.com/echasnovski/mini.notify
     "echasnovski/mini.notify",
@@ -150,7 +153,10 @@ return {
   { -- https://github.com/echasnovski/mini.pairs
     "echasnovski/mini.pairs",
     version = "*",
-    opts = {},
+    event = "VeryLazy",
+    opts = {
+      modes = { insert = true, command = true, terminal = false },
+    },
   },
   { -- https://github.com/echasnovski/mini.statusline
     "echasnovski/mini.statusline",
@@ -172,6 +178,7 @@ return {
           { "<leader>g", group = "Git" },
           { "<leader>s", group = "Search" },
           { "<leader>t", group = "Toggle" },
+          { "<leader>u", group = "UI" },
           { "<leader>x", group = "Diag/Fix" },
           { "[", group = "prev" },
           { "]", group = "next" },
@@ -180,14 +187,14 @@ return {
           { "z", group = "fold" },
           {
             "<leader>b",
-            group = "buffer",
+            group = "Buffer",
             expand = function()
               return require("which-key.extras").expand.buf()
             end,
           },
           {
             "<leader>w",
-            group = "windows",
+            group = "Windows",
             proxy = "<c-w>",
             expand = function()
               return require("which-key.extras").expand.win()

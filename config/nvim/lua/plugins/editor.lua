@@ -162,6 +162,39 @@ return {
     event = "VeryLazy",
     opts = {
       icons = { mappings = false },
+      spec = {
+        {
+          mode = { "n", "v" },
+          { "<leader><tab>", group = "Tabs" },
+          { "<leader>c", group = "Code" },
+          { "<leader>d", group = "Debug" },
+          { "<leader>f", group = "Find" },
+          { "<leader>g", group = "Git" },
+          { "<leader>s", group = "Search" },
+          { "<leader>t", group = "Toggle" },
+          { "<leader>x", group = "Diag/Fix" },
+          { "[", group = "prev" },
+          { "]", group = "next" },
+          { "g", group = "goto" },
+          { "gs", group = "surround" },
+          { "z", group = "fold" },
+          {
+            "<leader>b",
+            group = "buffer",
+            expand = function()
+              return require("which-key.extras").expand.buf()
+            end,
+          },
+          {
+            "<leader>w",
+            group = "windows",
+            proxy = "<c-w>",
+            expand = function()
+              return require("which-key.extras").expand.win()
+            end,
+          },
+        },
+      },
     },
     keys = {
       {

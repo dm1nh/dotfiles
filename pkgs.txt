@@ -6,7 +6,6 @@ blueman
 btop
 breeze-snow-cursor-theme
 calc
-chromium
 clang
 dart-sass
 docker
@@ -14,6 +13,7 @@ docker-compose
 docker-machine
 fd
 file-roller
+firefox-developer-edition
 fish
 foot
 git

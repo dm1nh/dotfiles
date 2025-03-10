@@ -105,6 +105,7 @@ theme.tasklist_shape = helpers.ui.rrect(dpi(2))
 -- Swallowing
 theme.dont_swallow_classname_list = {
   "firefox",
+  "firefox-developer-edition",
   "chromium",
   "gimp",
   "Google-chrome",

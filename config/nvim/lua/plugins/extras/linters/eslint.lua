@@ -1,20 +1,13 @@
 local supported = {
-  "css",
-  "graphql",
-  "handlebars",
-  "html",
   "javascript",
   "javascriptreact",
-  "json",
-  "jsonc",
-  "less",
-  "markdown",
-  "markdown.mdx",
-  "scss",
+  "javascript.jsx",
   "typescript",
   "typescriptreact",
+  "typescript.tsx",
   "vue",
-  "yaml",
+  "svelte",
+  "astro",
 }
 
 return {

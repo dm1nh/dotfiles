@@ -237,6 +237,62 @@ return {
         end,
         desc = "Grep",
       },
+      {
+        "<leader>gf",
+        function()
+          require("fzf-lua").git_files()
+        end,
+        desc = "Git files",
+      },
+      {
+        "<leader>gs",
+        function()
+          require("fzf-lua").git_status()
+        end,
+        desc = "Git status",
+      },
+      {
+        "<leader>gc",
+        function()
+          require("fzf-lua").git_commits()
+        end,
+        desc = "Git commits (Project)",
+      },
+      {
+        "<leader>gC",
+        function()
+          require("fzf-lua").git_bcommits()
+        end,
+        desc = "Git commits (Buffer)",
+      },
+      {
+        "<leader>gb",
+        function()
+          require("fzf-lua").git_blame()
+        end,
+        desc = "Git blame",
+      },
+      {
+        "<leader>gB",
+        function()
+          require("fzf-lua").git_branches()
+        end,
+        desc = "Git branches",
+      },
+      {
+        "<leader>gt",
+        function()
+          require("fzf-lua").git_tags()
+        end,
+        desc = "Git tags",
+      },
+      {
+        "<leader>gs",
+        function()
+          require("fzf-lua").git_stash()
+        end,
+        desc = "Git stash",
+      },
     },
     opts = {},
   },

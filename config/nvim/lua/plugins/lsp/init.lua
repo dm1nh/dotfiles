@@ -40,47 +40,66 @@ return {
         --
         -- In this case, we create a function that lets us more easily define mappings specific
         -- for LSP related items. It sets the mode, buffer and description for us each time.
-        local map = function(keys, func, desc, mode)
-          mode = mode or "n"
-          vim.keymap.set(mode, keys, func, { buffer = event.buf, desc })
-        end
+        -- local map = function(keys, func, desc, mode)
+        --   mode = mode or "n"
+        --   vim.keymap.set(mode, keys, func, { buffer = event.buf, desc })
+        -- end
+        local map = vim.keymap.set
 
         -- Jump to the definition of the word under your cursor.
         --  This is where a variable was first declared, or where a function is defined, etc.
         --  To jump back, press <C-t>.
-        map("gd", require("fzf-lua").lsp_definitions, "Definitions")
+        map("n", "gd", function()
+          require("fzf-lua").lsp_definitions()
+        end, { desc = "Definitions", buffer = event.buf })
 
-        -- Find references for the word under your cursor.
-        map("gr", require("fzf-lua").lsp_references, "References")
+        -- Find references
+        map("n", "gr", function()
+          require("fzf-lua").lsp_references()
+        end, { desc = "References", buffer = event.buf })
 
         -- Jump to the implementation of the word under your cursor.
         --  Useful when your language has ways of declaring types without an actual implementation.
-        map("gI", require("fzf-lua").lsp_implementations, "Implementations")
+        map("n", "gI", function()
+          require("fzf-lua").lsp_implementations()
+        end, { desc = "Implementations", buffer = event.buf })
 
         -- Jump to the type of the word under your cursor.
         --  Useful when you're not sure what type a variable is and you want to see
         --  the definition of its *type*, not where it was *defined*.
-        map("<leader>D", require("fzf-lua").lsp_typedefs, "Typedefs")
+        map("n", "<leader>D", function()
+          require("fzf-lua").lsp_typedefs()
+        end, { desc = "Typedefs", buffer = event.buf })
 
         -- Fuzzy find all the symbols in your current document.
         --  Symbols are things like variables, functions, types, etc.
-        map("<leader>ds", require("fzf-lua").lsp_document_symbols, "Document symbols")
+        map(
+          "n",
+          "<leader>ds",
+          require("fzf-lua").lsp_document_symbols,
+          { desc = "Document symbols", buffer = event.buf }
+        )
 
         -- Fuzzy find all the symbols in your current workspace.
         --  Similar to document symbols, except searches over your entire project.
-        map("<leader>ws", require("fzf-lua").lsp_workspace_symbols, "Workspace symbols")
+        map(
+          "n",
+          "<leader>ws",
+          require("fzf-lua").lsp_workspace_symbols,
+          { desc = "Workspace symbols", buffer = event.buf }
+        )
 
         -- Rename the variable under your cursor.
         --  Most Language Servers support renaming across files, etc.
-        map("<leader>cr", vim.lsp.buf.rename, "Rename")
+        map("n", "<leader>cr", vim.lsp.buf.rename, { desc = "Rename", buffer = event.buf })
 
         -- Execute a code action, usually your cursor needs to be on top of an error
         -- or a suggestion from your LSP for this to activate.
-        map("<leader>ca", vim.lsp.buf.code_action, "Code action", { "n", "x" })
+        map({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action", buffer = event.buf })
 
         -- WARN: This is not Goto Definition, this is Goto Declaration.
         --  For example, in C this would take you to the header.
-        map("gD", vim.lsp.buf.declaration, "Declaration")
+        map("n", "gD", vim.lsp.buf.declaration, { desc = "Declaration", buffer = event.buf })
 
         -- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
         ---@param client vim.lsp.Client
@@ -131,9 +150,9 @@ return {
         --
         -- This may be unwanted, since they displace some of your code
         if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf) then
-          map("<leader>th", function()
+          map("n", "<leader>th", function()
             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
-          end, "[T]oggle Inlay [H]ints")
+          end, { desc = "Toggle inlay hints", buffer = event.buf })
         end
       end,
     })
@@ -203,7 +222,7 @@ return {
     require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
     require("mason-lspconfig").setup {
-      ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+      ensure_installed = {}, -- explicitly set to an empty table (nvim populates installs via mason-tool-installer)
       automatic_installation = false,
       handlers = {
         function(server_name)

@@ -34,6 +34,12 @@ map("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
 map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to other buffer" })
 map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to other buffer" })
 
+-- Clear search and stop snippet on escape
+map({ "i", "n", "s" }, "<esc>", function()
+  vim.cmd "noh"
+  return "<esc>"
+end, { expr = true, desc = "Escape and Clear hlsearch" })
+
 -- Clear search, diff update and redraw
 -- taken from runtime/lua/_editor.lua
 map("n", "<leader>ur", "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>", { desc = "Redraw" })

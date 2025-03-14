@@ -12,6 +12,8 @@ M.gen = function(schema)
 	local template = util.template(
 		[[
 # ${theme} colorscheme for foot
+[cursor]
+color=${bg_dark} ${accent}
 
 [colors]
 foreground=${fg}

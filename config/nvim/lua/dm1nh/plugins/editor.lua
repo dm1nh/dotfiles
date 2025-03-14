@@ -21,6 +21,16 @@ return {
       },
     },
   },
+  { -- https://github.com/lukas-reineke/indent-blankline.nvim
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {
+      indent = { char = "╎" },
+      scope = { enabled = false },
+    },
+  },
   { -- https://github.com/echasnovski/mini.comment
     "echasnovski/mini.comment",
     version = "*",

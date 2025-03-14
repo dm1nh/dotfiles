@@ -1,8 +1,8 @@
-require "config.options"
-require "utils"
-require "config.keymaps"
-require "config.autocmds"
-require "config.lazy"
+require "dm1nh.config.options"
+require "dm1nh.utils"
+require "dm1nh.config.keymaps"
+require "dm1nh.config.autocmds"
+require "dm1nh.config.lazy"
 
 -- Load colorscheme
 vim.cmd "colorscheme trop"

@@ -25,9 +25,10 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup {
   spec = {
     -- import your plugins
-    { import = "plugins" },
-    { import = "plugins.extras.langs.typescript" },
-    { import = "plugins.extras.formatters.prettier" },
+    { import = "dm1nh.plugins" },
+    { import = "dm1nh.plugins.extras.langs.typescript" },
+    { import = "dm1nh.plugins.extras.formatters.prettier" },
+    { import = "dm1nh.plugins.extras.linters.eslint" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- automatically check for plugin updates

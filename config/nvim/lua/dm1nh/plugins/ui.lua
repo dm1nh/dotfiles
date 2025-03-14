@@ -14,7 +14,7 @@ return {
   { -- https://github.com/echasnovski/mini.icons
     "echasnovski/mini.icons",
     version = "*",
-    opts = {},
+    opts = require("dm1nh.config.icons").mini_icons,
   },
   { -- https://github.com/echasnovski/mini.notify
     "echasnovski/mini.notify",

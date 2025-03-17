@@ -16,6 +16,7 @@ file-roller
 firefox-developer-edition
 fish
 foot
+fzf
 git
 gjs
 glfw

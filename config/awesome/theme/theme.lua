@@ -9,7 +9,7 @@ local icons = require("theme.icons")
 local palette = require("theme.palette")
 
 -- fonts
-theme.font_sans = "Jedi Nerd Font"
+theme.font_sans = "JetBrainsMonoNL Nerd Font"
 theme.font = theme.font_sans .. " Regular 12"
 theme.font_icon = "Material Symbols Rounded"
 theme.font_icon_default = theme.font_icon .. " 15"

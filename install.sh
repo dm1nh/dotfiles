@@ -32,7 +32,7 @@ sudo systemctl enable rfkill-block@bluetooth.service # turn off bluetooth on sta
 xdg-user-dirs-update
 
 # Copy fonts
-sudo cp -R ./fonts/JetBrainsMonoNerdFont,Barlow,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
+sudo cp -R ./fonts/JetBrainsMonoNerdFont,Mulish,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
 fc-cache -r
 
 # Install sddm astronaut theme

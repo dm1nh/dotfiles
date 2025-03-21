@@ -40,4 +40,11 @@ return {
     "windwp/nvim-ts-autotag",
     opts = {},
   },
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+    config = function(_, opts)
+      opts = opts or {}
+      require("rainbow-delimiters.setup").setup(opts)
+    end,
+  },
 }

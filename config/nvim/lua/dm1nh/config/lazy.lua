@@ -27,8 +27,8 @@ require("lazy").setup {
     -- import your plugins
     { import = "dm1nh.plugins" },
     { import = "dm1nh.plugins.extras.langs.typescript" },
-    { import = "dm1nh.plugins.extras.formatters.prettier" },
-    { import = "dm1nh.plugins.extras.linters.eslint" },
+    { import = "dm1nh.plugins.extras.formatting.prettier" },
+    { import = "dm1nh.plugins.extras.linting.eslint" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- automatically check for plugin updates

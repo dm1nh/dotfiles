@@ -32,7 +32,7 @@ sudo systemctl enable rfkill-block@bluetooth.service # turn off bluetooth on sta
 xdg-user-dirs-update
 
 # Copy fonts
-sudo cp -R ./fonts/JetBrainsMonoNerdFont,Mulish,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
+sudo cp -R ./fonts/JetBrainsMonoNerdFont,Roboto,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
 fc-cache -r
 
 # Install sddm astronaut theme
@@ -70,6 +70,9 @@ fi
 
 # Run Docker without sudo
 sudo usermod -aG docker $USER
+
+# Enable systemctl services
+sudo systemctl enable docker
 
 paru -Rns $(paru -Qdtq)
 paru -Scc --noconfirm

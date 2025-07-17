@@ -12,12 +12,11 @@ M.gen = function(schema)
 	local template = util.template(
 		[[
 # ${theme} colorscheme for foot
-[cursor]
-color=${bg_dark} ${accent}
-
 [colors]
 foreground=${fg}
 background=${bg_dark}
+
+cursor=${bg_dark} ${accent}
 
 regular0=${terminal_black}
 regular1=${terminal_red}
@@ -45,8 +44,7 @@ search-box-no-match=${bg} ${blue}
 search-box-match=${bg} ${red}
 
 jump-labels=${bg} ${purple}
-urls=${aqua}
-    ]],
+urls=${aqua}]],
 		sch
 	)
 

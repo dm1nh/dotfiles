@@ -11,6 +11,12 @@ dart-sass
 docker
 docker-compose
 docker-machine
+fcitx5
+fcitx5-bamboo
+fcitx5-configtool
+fcitx5-qt
+fcitx5-gtk
+fcitx5-configtool
 fd
 file-roller
 firefox-developer-edition

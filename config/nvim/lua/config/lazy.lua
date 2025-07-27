@@ -51,6 +51,8 @@ require("lazy").setup({
 		-- { import = "lazyvim.plugins.extras.coding.yanky" },
 		-- { import = "lazyvim.plugins.extras.editor.mini-files" },
 		-- { import = "lazyvim.plugins.extras.util.project" },
+		-- your own extra plugins
+		{ import = "plugins.extras.lang.latex" },
 		-- import your plugins
 		{ import = "plugins" },
 	},

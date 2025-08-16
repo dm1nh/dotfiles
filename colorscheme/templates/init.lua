@@ -1,14 +1,14 @@
 local templates = {
-	"ags",
-	"alacritty",
-	"awesome",
+	-- "ags",
+	-- "alacritty",
+	-- "awesome",
 	"btop",
 	"fish",
 	"foot",
 	"hyprland",
 	"imv",
 	"rofi",
-	"sddm-astronaut-theme",
+	-- "sddm-astronaut-theme",
 	"zathura",
 }
 

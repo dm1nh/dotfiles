@@ -1,7 +1,5 @@
 /config/*
 !/config/ags
-!/config/alacritty
-!/config/awesome
 !/config/btop
 /config/btop/btop.log
 !/config/fish
@@ -14,11 +12,8 @@
 !/config/gtk-4.0
 !/config/hypr
 !/config/imv
-!/config/lutgen
 !/config/nvim
-!/config/nvim.backup
 !/config/rofi
-!/config/sddm-astronaut-theme
 !/config/tmux
 !/config/zathura
 !/config/starship.toml

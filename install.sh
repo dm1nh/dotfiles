@@ -59,6 +59,7 @@ ln -s ~/.dots/config ~/.config
 # sudo cp -R ./misc/sddm.conf.d /etc/
 cp ./misc/{.gitconfig} ~/
 cp -R ./misc/.icons ~/
+sudo cp ./misc/reflector.conf /etc/xdg/reflector/
 
 # Remove default cursor theme
 sudo rm -rf /usr/share/icons/default

@@ -1,0 +1,65 @@
+@use "sass:color";
+@use "sass:math";
+@use "colors" as *;
+@use "variables" as *;
+
+* {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+scale {
+  margin: 0;
+  padding: 0;
+  trough {
+    highlight {
+      background-color: $accent;
+      min-height: 25px;
+      // min-width: 25px;
+    }
+    slider {
+      box-shadow: none;
+      outline: unset;
+      background-color: transparent;
+    }
+  }
+}
+
+menubutton {
+  padding: 0;
+  button {
+    padding: unset;
+    margin: unset;
+
+    &:hover {
+      background-color: color.adjust($fg, $alpha: -0.85);
+    }
+  }
+}
+
+button {
+  padding: unset;
+  margin: unset;
+  background-color: transparent;
+  transition: transform 0.2s ease-in-out;
+
+  &:active {
+    > * {
+      transform: scale(0.85);
+    }
+  }
+
+  &:hover {
+    background-color: color.adjust($fg, $alpha: -0.85);
+  }
+}
+
+window.Bar {
+  background: transparent;
+
+  .bar-container {
+    background-color: $bar-bg;
+    color: $bar-fg;
+  }
+}

@@ -1,4 +1,4 @@
-ags-hyprpanel-git
+aylurs-gtk-shell-git
 base-devel
 blueman
 bluez
@@ -42,6 +42,7 @@ imagemagick
 imv
 jq
 lazygit
+libastal-meta
 libgtop
 libnotify
 libsoup3

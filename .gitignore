@@ -11,7 +11,6 @@
 /config/gtk-3.0/bookmarks
 !/config/gtk-4.0
 !/config/hypr
-!/config/hyprpanel
 !/config/imv
 !/config/nvim
 !/config/rofi

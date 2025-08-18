@@ -1,0 +1,22 @@
+@use "../variables.scss" as *;
+
+.workspaces {
+  .workspace-button {
+    min-height: 12px;
+    min-width: 12px;
+    border-radius: 100px;
+    background-color: $workspace-button-bg;
+
+    &.active {
+      min-width: 24px;
+      background-color: $workspace-button-bg-active;
+    }
+
+    &.occupied {
+      background-color: $workspace-button-bg-occupied;
+      &.active {
+        background-color: $workspace-button-bg-active;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "colors" as *;
+
+$font: "JetBrainsMono Nerd Font";
+$font-icon: "Material Symbols Rounded";
+
+$window-border-radius: 8px;
+
+$bar-bg: $bg-bar;
+$bar-fg: $fg;
+
+$workspace-button-bg: $bg-highlight;
+$workspace-button-bg-active: $accent;
+$workspace-button-bg-occupied: $dark1;

@@ -3,11 +3,13 @@ import AstalHyprland from "gi://AstalHyprland"
 import { range } from "../../utils"
 import { CCProps, createBinding, createComputed } from "ags"
 
-type WsButtonProps = {
+type WsButtonProps = Partial<
+  CCProps<Gtk.Button, Gtk.Button.ConstructorProps>
+> & {
   ws: AstalHyprland.Workspace
 }
 
-function WsButton({ ws }: WsButtonProps) {
+function WsButton({ ws, ...props }: WsButtonProps) {
   const hyprland = AstalHyprland.get_default()
   const classNames = createComputed(
     [
@@ -29,13 +31,14 @@ function WsButton({ ws }: WsButtonProps) {
       valign={Gtk.Align.CENTER}
       halign={Gtk.Align.CENTER}
       onClicked={() => ws.focus()}
+      {...props}
     ></button>
   )
 }
 
 function Workspaces() {
   return (
-    <box cssClasses={["workspaces"]} spacing={4}>
+    <box cssClasses={["workspaces"]} spacing={8}>
       {range(6).map((i) => (
         <WsButton ws={AstalHyprland.Workspace.dummy(i + 1, null)} />
       ))}

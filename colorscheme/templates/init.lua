@@ -1,5 +1,5 @@
 local templates = {
-	-- "ags",
+	"ags",
 	-- "alacritty",
 	-- "awesome",
 	"btop",

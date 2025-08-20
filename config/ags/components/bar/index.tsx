@@ -2,6 +2,7 @@ import app from "ags/gtk4/app"
 import { Astal, Gdk, Gtk } from "ags/gtk4"
 import { Clock } from "./clock"
 import { Workspaces } from "./workspaces"
+import { Volume } from "./volume"
 
 export function Bar(gdkmonitor: Gdk.Monitor) {
   const { BOTTOM, LEFT, RIGHT } = Astal.WindowAnchor
@@ -20,7 +21,8 @@ export function Bar(gdkmonitor: Gdk.Monitor) {
         <box $type="start" halign={Gtk.Align.START}>
           <Workspaces />
         </box>
-        <box $type="end" halign={Gtk.Align.END}>
+        <box $type="end" halign={Gtk.Align.END} spacing={8}>
+          <Volume />
           <Clock />
         </box>
       </centerbox>

@@ -1,14 +1,43 @@
 @use "../variables.scss" as *;
+@use "../colors.scss" as *;
+
+window.Bar {
+  background: transparent;
+
+  .bar-container {
+    padding: 0rem 0.4rem;
+    min-height: 1.75rem;
+    background-color: $bar-bg;
+    color: $bar-fg;
+  }
+}
+
+.module-container {
+  .icon {
+    padding: 0rem 0.6rem;
+    font-family: $font-icon;
+    font-size: 20px;
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    color: $module-container-icon-fg;
+  }
+  .label {
+    padding: 0rem 0.6rem;
+    background-color: $module-container-label-bg;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+}
 
 .workspaces {
   .workspace-button {
-    min-height: 12px;
-    min-width: 12px;
+    min-height: 0.8rem;
+    min-width: 0.8rem;
     border-radius: 100px;
     background-color: $workspace-button-bg;
 
     &.active {
-      min-width: 24px;
+      min-width: 1.2rem;
       background-color: $workspace-button-bg-active;
     }
 
@@ -18,5 +47,23 @@
         background-color: $workspace-button-bg-active;
       }
     }
+  }
+}
+
+.clock {
+  .icon {
+    background-color: $module-clock-color;
+  }
+  .label {
+    color: $module-clock-color;
+  }
+}
+
+.volume {
+  .icon {
+    background-color: $module-volume-color;
+  }
+  .label {
+    color: $module-volume-color;
   }
 }

@@ -5,8 +5,8 @@
 
 * {
   font-family: $font;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 scale {
@@ -14,8 +14,7 @@ scale {
   padding: 0;
   trough {
     highlight {
-      background-color: $accent;
-      min-height: 25px;
+      min-height: 6px;
       // min-width: 25px;
     }
     slider {
@@ -52,14 +51,5 @@ button {
 
   &:hover {
     background-color: color.adjust($fg, $alpha: -0.85);
-  }
-}
-
-window.Bar {
-  background: transparent;
-
-  .bar-container {
-    background-color: $bar-bg;
-    color: $bar-fg;
   }
 }

@@ -5,15 +5,28 @@ $font-icon: "Material Symbols Rounded";
 
 $radius: 4px;
 
-$bar-bg: $bg-bar;
-$bar-fg: $fg;
+$clr-bar-bg: $bg-bar;
+$clr-bar-fg: $fg;
 
-$workspace-button-bg: $bg-highlight;
-$workspace-button-bg-active: $accent;
-$workspace-button-bg-occupied: $dark1;
+$clr-ws-button-bg: $bg-highlight;
+$clr-ws-button-bg-active: $accent;
+$clr-ws-button-bg-occupied: $dark1;
 
-$module-container-icon-fg: $bg;
-$module-container-label-bg: $bg;
+$clr-taskbar-client-icon-fg: $fg;
+$clr-taskbar-client-icon-bg: $bg-dark;
+$clr-taskbar-client-icon-fg-active: $bg;
+$clr-taskbar-client-icon-bg-active: $accent;
+$clr-taskbar-client-title-fg: $dark2;
+$clr-taskbar-client-title-bg: $bg;
+$clr-taskbar-client-title-fg-active: $accent;
+$clr-taskbar-client-title-bg-active: $bg-highlight;
 
-$module-clock-color: $accent;
-$module-volume-color: $purple;
+$clr-module-icon-fg: $bg;
+$clr-module-icon-bg: $bg;
+$clr-module-label-fg: $bg;
+$clr-module-label-bg: $bg;
+
+$clr-module-clock: $yellow;
+$clr-module-network: $purple;
+$clr-module-netstats: $orange;
+$clr-module-volume: $aqua;

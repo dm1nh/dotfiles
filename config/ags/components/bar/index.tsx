@@ -3,6 +3,10 @@ import { Astal, Gdk, Gtk } from "ags/gtk4"
 import { Clock } from "./clock"
 import { Workspaces } from "./workspaces"
 import { Volume } from "./volume"
+import { Taskbar } from "./taskbar"
+import { Network } from "./network"
+import { Netstats } from "./netstats"
+import { Systray } from "./systray"
 
 export function Bar(gdkmonitor: Gdk.Monitor) {
   const { BOTTOM, LEFT, RIGHT } = Astal.WindowAnchor
@@ -18,11 +22,15 @@ export function Bar(gdkmonitor: Gdk.Monitor) {
       application={app}
     >
       <centerbox cssClasses={["bar-container"]}>
-        <box $type="start" halign={Gtk.Align.START}>
+        <box $type="start" halign={Gtk.Align.START} spacing={8}>
           <Workspaces />
+          <Taskbar />
         </box>
         <box $type="end" halign={Gtk.Align.END} spacing={8}>
+          <Systray />
           <Volume />
+          <Network />
+          <Netstats />
           <Clock />
         </box>
       </centerbox>

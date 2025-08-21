@@ -1,6 +1,6 @@
 import { Gtk } from "ags/gtk4"
 import AstalHyprland from "gi://AstalHyprland"
-import { range } from "../../utils"
+import { range } from "../../../utils"
 import { CCProps, createBinding, createComputed } from "ags"
 
 type WsButtonProps = Partial<

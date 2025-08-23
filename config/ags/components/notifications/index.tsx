@@ -40,7 +40,7 @@ function NotificationPopups() {
           class="notification-popups"
           gdkmonitor={monitor}
           visible={notifications((ns) => ns.length > 0)}
-          anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.RIGHT}
+          anchor={Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.RIGHT}
         >
           <box orientation={Gtk.Orientation.VERTICAL}>
             <For each={notifications}>

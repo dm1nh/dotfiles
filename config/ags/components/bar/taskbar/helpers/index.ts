@@ -29,5 +29,7 @@ export function truncateTitle(title: string | null, maxSize: number = 12) {
   if (title == null) {
     return "--"
   }
-  return title.substring(0, maxSize).trim() + "..."
+  return title.length > maxSize
+    ? title.substring(0, maxSize).trim() + "..."
+    : title
 }

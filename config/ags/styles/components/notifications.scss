@@ -53,9 +53,12 @@ window.notification-popups {
     }
 
     button {
+      border-radius: $radius;
       padding: 0.2rem;
       min-width: 0;
       min-height: 0;
+      background-color: $clr-notification-critical;
+      color: $clr-notification-bg;
     }
   }
 
@@ -74,7 +77,7 @@ window.notification-popups {
     }
 
     .body {
-      color: gtkalpha($clr-notification-fg, 0.8);
+      color: gtkalpha($clr-notification-fg, 0.6);
       font-size: 1em;
     }
 
@@ -95,6 +98,10 @@ window.notification-popups {
 
     button {
       margin: 0 0.3rem;
+      padding: 0.3rem 0;
+      font-size: 0.8rem;
+      border-radius: $radius;
+      background-color: gtkalpha($clr-notification-fg, 0.1);
 
       &:first-child {
         margin-left: 0;

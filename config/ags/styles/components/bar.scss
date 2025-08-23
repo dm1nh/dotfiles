@@ -60,30 +60,26 @@ window.Bar {
       background-color: $clr-taskbar-client-icon-bg-active;
       color: $clr-taskbar-client-icon-fg-active;
     }
-    .client-title {
-      background-color: $clr-taskbar-client-title-bg-active;
-      color: $clr-taskbar-client-title-fg-active;
-    }
-  }
-  .client-container {
+    // .client-title {
+    //   background-color: $clr-taskbar-client-title-bg-active;
+    //   color: $clr-taskbar-client-title-fg-active;
+    // }
   }
   .client-icon {
     padding: 0rem 0.6rem;
     font-family: $font-icon;
-    font-size: 18px;
-    border-top-left-radius: $radius;
-    border-bottom-left-radius: $radius;
+    border-radius: $radius;
     background-color: $clr-taskbar-client-icon-bg;
     color: $clr-taskbar-client-icon-fg;
   }
-  .client-title {
-    min-width: 8em;
-    padding: 0rem 0.6rem;
-    border-top-right-radius: $radius;
-    border-bottom-right-radius: $radius;
-    background-color: $clr-taskbar-client-title-bg;
-    color: $clr-taskbar-client-title-fg;
-  }
+  // .client-title {
+  //   min-width: 8em;
+  //   padding: 0rem 0.6rem;
+  //   border-top-right-radius: $radius;
+  //   border-bottom-right-radius: $radius;
+  //   background-color: $clr-taskbar-client-title-bg;
+  //   color: $clr-taskbar-client-title-fg;
+  // }
 }
 
 .exit-button {

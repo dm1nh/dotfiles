@@ -7,6 +7,7 @@ import { Taskbar } from "./taskbar"
 import { Network } from "./network"
 import { Netstats } from "./netstats"
 import { Systray } from "./systray"
+import { ExitButton } from "./exit-button"
 
 export function Bar(gdkmonitor: Gdk.Monitor) {
   const { BOTTOM, LEFT, RIGHT } = Astal.WindowAnchor
@@ -32,6 +33,7 @@ export function Bar(gdkmonitor: Gdk.Monitor) {
           <Network />
           <Netstats />
           <Clock />
+          <ExitButton />
         </box>
       </centerbox>
     </window>

@@ -2,6 +2,7 @@ import { ModuleContainer } from "../shared/module-container"
 import { Gtk } from "ags/gtk4"
 import { volumeIcon, volumeValue } from "./helpers"
 import AstalWp from "gi://AstalWp"
+import { bash } from "../../../utils"
 
 function Volume() {
   const speaker = AstalWp.get_default()?.audio!.default_speaker
@@ -20,6 +21,7 @@ function Volume() {
       class="volume"
       icon={volumeIcon}
       label={volumeValue}
+      onClicked={() => bash("pavucontrol")}
       $={(self) => {
         const scroll_event = Gtk.EventControllerScroll.new(
           Gtk.EventControllerScrollFlags.VERTICAL,

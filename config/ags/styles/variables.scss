@@ -26,7 +26,12 @@ $clr-module-icon-bg: $bg;
 $clr-module-label-fg: $bg;
 $clr-module-label-bg: $bg;
 
+$clr-module-exit-button: $red;
 $clr-module-clock: $yellow;
 $clr-module-network: $purple;
 $clr-module-netstats: $orange;
 $clr-module-volume: $aqua;
+
+$clr-notification-bg: $bg-dark;
+$clr-notification-fg: $fg;
+$clr-notification-critical: $red;

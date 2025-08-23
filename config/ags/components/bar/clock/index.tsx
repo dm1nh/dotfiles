@@ -1,10 +1,15 @@
 import { ModuleContainer } from "../shared/module-container"
-import { getFormattedTime } from "./helpers"
+import { clockLabel, clockTooltip } from "./helpers"
 
-function Clock({ format }: { format?: string }) {
-  const time = getFormattedTime(format)
-
-  return <ModuleContainer class="clock" icon="" label={time} />
+function Clock() {
+  return (
+    <ModuleContainer
+      class="clock"
+      icon=""
+      label={clockLabel}
+      tooltipText={clockTooltip}
+    />
+  )
 }
 
 export { Clock }

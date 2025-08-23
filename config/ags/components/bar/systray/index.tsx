@@ -7,7 +7,7 @@ function Systray() {
   const items = createBinding(tray, "items")
 
   return (
-    <box class="systray" spacing={4}>
+    <box class="systray" spacing={2}>
       <For each={items}>
         {(item) => (
           <menubutton

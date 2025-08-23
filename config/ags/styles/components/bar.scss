@@ -16,7 +16,7 @@ window.Bar {
   .icon {
     padding: 0rem 0.6rem;
     font-family: $font-icon;
-    font-size: 20px;
+    font-size: 18px;
     border-top-left-radius: $radius;
     border-bottom-left-radius: $radius;
     color: $clr-module-icon-fg;
@@ -70,7 +70,7 @@ window.Bar {
   .client-icon {
     padding: 0rem 0.6rem;
     font-family: $font-icon;
-    font-size: 20px;
+    font-size: 18px;
     border-top-left-radius: $radius;
     border-bottom-left-radius: $radius;
     background-color: $clr-taskbar-client-icon-bg;
@@ -82,6 +82,15 @@ window.Bar {
     border-bottom-right-radius: $radius;
     background-color: $clr-taskbar-client-title-bg;
     color: $clr-taskbar-client-title-fg;
+  }
+}
+
+.exit-button {
+  .icon {
+    background-color: $clr-module-exit-button;
+  }
+  .label {
+    color: $clr-module-exit-button;
   }
 }
 
@@ -127,7 +136,7 @@ window.Bar {
 
   .button-icon {
     border-radius: $radius;
-    padding: 0rem 0.6rem;
+    padding: 0rem 0.4rem;
     min-width: 18px;
     min-height: 18px;
   }

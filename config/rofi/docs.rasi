@@ -10,7 +10,7 @@
  */
 
 configuration {
-  font:                           "JetBrainsMonoNL Nerd Font Regular 14";
+  font:                           "Jet Nerd Font Regular 14";
   show-icons:                     true;
   icon-theme:                     "Papirus-Dark";
   display-drun:                   "Documents";
@@ -39,7 +39,7 @@ prompt {
   background-color:               @purple;
   text-color:                     @bg;
   border-radius:                  4px;
-  font:                           "JetBrainsMonoNL Nerd Font Regular 14";
+  font:                           "Jet Nerd Font Regular 14";
 }
 
 textbox-prompt-colon {

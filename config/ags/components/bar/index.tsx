@@ -27,7 +27,7 @@ export function Bar(gdkmonitor: Gdk.Monitor) {
           <Workspaces />
           <Taskbar />
         </box>
-        <box $type="end" halign={Gtk.Align.END} spacing={8}>
+        <box $type="end" halign={Gtk.Align.END} spacing={4}>
           <Systray />
           <Volume />
           <Network />

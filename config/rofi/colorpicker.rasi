@@ -11,7 +11,7 @@
 
 configuration {
   show-icons:                     false;
-  font:                           "JetBrainsMonoNL Nerd Font Regular 14";
+  font:                           "Jet Nerd Font Regular 14";
   disable-history:                false;
   sidebar-mode:                   false;
 }
@@ -91,7 +91,7 @@ element {
 element-text {
   background-color:               inherit;
   text-color:                     inherit;
-  font:                           "JetBrainsMonoNL Nerd Font Medium 28";
+  font:                           "Jet Nerd Font Medium 28";
   expand:                         true;
   horizontal-align:               0.5;
   vertical-align:                 0.5;

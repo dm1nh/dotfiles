@@ -25,7 +25,7 @@ export const clientClassNames = (client: AstalHyprland.Client) =>
     return classes
   })
 
-export function truncateTitle(title: string | null, maxSize: number = 12) {
+export function truncateTitle(title: string | null, maxSize: number = 16) {
   if (title == null) {
     return "--"
   }

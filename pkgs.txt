@@ -1,6 +1,5 @@
 aylurs-gtk-shell-git
 base-devel
-blueman
 bluez
 bluez-utils
 btop
@@ -29,7 +28,6 @@ go
 grim
 gtk3
 gtk4
-gtksourceview3
 gvfs
 hypridle
 hyprland
@@ -43,14 +41,14 @@ imv
 jq
 lazygit
 libastal-meta
-libgtop
 libnotify
-libsoup3
 luacheck
+ly
 man-db
 neovim
 networkmanager
 net-tools
+nnn
 pamixer
 papirus-icon-theme
 pavucontrol
@@ -74,7 +72,6 @@ swappy
 tmux
 tree
 unzip
-upower
 vulkan-radeon
 wf-recorder
 wget
@@ -85,9 +82,6 @@ xdg-desktop-portal
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 xdg-utils
-xorg-xlsclients
-xorg-xrdb
-xorg-xwayland
 zathura
 zathura-pdf-poppler
 vlc

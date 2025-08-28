@@ -27,7 +27,7 @@ map <C-i> recolor
 
 # OPTIONS
 # fonts
-set font "JetBrainsMonoNL Nerd Font Regular 14"
+set font "Jet Nerd Font Regular 14"
 
 # fit width
 set adjust-open "best-fit"

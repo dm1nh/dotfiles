@@ -1,5 +1,5 @@
 import { For } from "ags"
-import { currentWsClients, clientClassNames } from "./helpers"
+import { currentWsClients, clientClassNames, truncateTitle } from "./helpers"
 
 function Taskbar() {
   return (
@@ -11,7 +11,18 @@ function Taskbar() {
             onClicked={() => client.focus()}
             tooltipText={client.title}
           >
-            <image class="client-icon" iconName={client.class} pixelSize={24} />
+            <box>
+              <image
+                class="client-icon"
+                iconName={client.class}
+                pixelSize={24}
+              />
+              <label
+                class="client-title"
+                label={truncateTitle(client.title)}
+                xalign={0}
+              />
+            </box>
           </button>
         )}
       </For>

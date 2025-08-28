@@ -14,7 +14,7 @@ window.Bar {
 
 .module-container {
   .icon {
-    padding: 0rem 0.6rem;
+    padding: 0 0.3em;
     font-family: $font-icon;
     font-size: 18px;
     border-top-left-radius: $radius;
@@ -23,7 +23,7 @@ window.Bar {
     background-color: $clr-module-icon-bg;
   }
   .label {
-    padding: 0rem 0.6rem;
+    padding: 0 0.3em;
     color: $clr-module-label-fg;
     background-color: $clr-module-label-bg;
     border-top-right-radius: $radius;
@@ -60,26 +60,27 @@ window.Bar {
       background-color: $clr-taskbar-client-icon-bg-active;
       color: $clr-taskbar-client-icon-fg-active;
     }
-    // .client-title {
-    //   background-color: $clr-taskbar-client-title-bg-active;
-    //   color: $clr-taskbar-client-title-fg-active;
-    // }
+    .client-title {
+      background-color: $clr-taskbar-client-title-bg-active;
+      color: $clr-taskbar-client-title-fg-active;
+    }
   }
   .client-icon {
-    padding: 0rem 0.6rem;
+    padding: 0rem 0.3rem;
     font-family: $font-icon;
-    border-radius: $radius;
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
     background-color: $clr-taskbar-client-icon-bg;
     color: $clr-taskbar-client-icon-fg;
   }
-  // .client-title {
-  //   min-width: 8em;
-  //   padding: 0rem 0.6rem;
-  //   border-top-right-radius: $radius;
-  //   border-bottom-right-radius: $radius;
-  //   background-color: $clr-taskbar-client-title-bg;
-  //   color: $clr-taskbar-client-title-fg;
-  // }
+  .client-title {
+    min-width: 8em;
+    padding: 0rem 0.3rem;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    background-color: $clr-taskbar-client-title-bg;
+    color: $clr-taskbar-client-title-fg;
+  }
 }
 
 .exit-button {

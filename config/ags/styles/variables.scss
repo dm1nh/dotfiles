@@ -1,0 +1,38 @@
+@use "colors" as *;
+
+$font: "JetBrainsMonoNL Nerd Font";
+$font-icon: "Material Symbols Rounded";
+$font-size: 18px;
+
+$radius: 0.25em;
+
+$clr-bar-bg: $bg-bar;
+$clr-bar-fg: $fg;
+
+$clr-ws-button-bg: $bg-highlight;
+$clr-ws-button-bg-active: $accent;
+$clr-ws-button-bg-occupied: $dark1;
+
+$clr-taskbar-client-icon-fg: $fg;
+$clr-taskbar-client-icon-bg: $black;
+$clr-taskbar-client-icon-fg-active: $bg;
+$clr-taskbar-client-icon-bg-active: $accent;
+$clr-taskbar-client-title-fg: $dark2;
+$clr-taskbar-client-title-bg: $bg-dark;
+$clr-taskbar-client-title-fg-active: $accent;
+$clr-taskbar-client-title-bg-active: $bg-highlight;
+
+$clr-module-icon-fg: $bg;
+$clr-module-icon-bg: $accent;
+$clr-module-label-fg: $fg;
+$clr-module-label-bg: $bg-highlight;
+
+$clr-module-exit-button: $red;
+$clr-module-clock: $yellow;
+$clr-module-network: $purple;
+$clr-module-netstats: $orange;
+$clr-module-volume: $aqua;
+
+$clr-notification-bg: $bg-dark;
+$clr-notification-fg: $fg;
+$clr-notification-critical: $red;

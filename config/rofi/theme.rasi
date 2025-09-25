@@ -1,0 +1,28 @@
+/* Trop colorscheme for Rofi */
+/* ~/.config/rofi/theme.rasi */
+* {
+  none:             #00000000;
+  accent:           #b2c98f;
+	bg:               #23292e;
+	bgbar:            #171b1f;
+	bg-dark:          #1e2428;
+	bg-dark1:         #1a1f22;
+	bg-highlight:     #2a3137;
+	fg:               #d3c6aa;
+	fg-dark:          #a99e88;
+	dark1:            #7a8478;
+	dark2:            #555c54;
+	fg-gutter:        #494f48;
+  border:           #555c54;
+  border-highlight: #b2c98f;
+	red:              #e67e80;
+	orange:           #e69875;
+	yellow:           #dbbc7f;
+	green:            #b2c98f;
+	aqua:             #83c092;
+	blue:             #7ba6d2;
+	purple:           #ad85d7;
+	magenta:          #d6a0d1;
+	terminal-black:   #444a4f;
+	comment:          #585f56;
+}

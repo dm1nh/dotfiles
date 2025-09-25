@@ -1,0 +1,145 @@
+@use "../variables.scss" as *;
+@use "../colors.scss" as *;
+
+window.Bar {
+  background: transparent;
+
+  .bar-container {
+    padding: 0rem 0.4rem;
+    min-height: 1.75rem;
+    background-color: $clr-bar-bg;
+    color: $clr-bar-fg;
+  }
+}
+
+.module-container {
+  .icon {
+    padding: 0 0.3em;
+    font-family: $font-icon;
+    font-size: 18px;
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    color: $clr-module-icon-fg;
+    background-color: $clr-module-icon-bg;
+  }
+  .label {
+    padding: 0 0.3em;
+    color: $clr-module-label-fg;
+    background-color: $clr-module-label-bg;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+}
+
+.workspaces {
+  .workspace-button {
+    min-height: 0.8rem;
+    min-width: 0.8rem;
+    border-radius: 100px;
+    background-color: $clr-ws-button-bg;
+
+    &.active {
+      min-width: 1.2rem;
+      background-color: $clr-ws-button-bg-active;
+    }
+
+    &.occupied {
+      background-color: $clr-ws-button-bg-occupied;
+      &.active {
+        background-color: $clr-ws-button-bg-active;
+      }
+    }
+  }
+}
+
+.taskbar {
+  .client {
+  }
+  .client.active {
+    .client-icon {
+      background-color: $clr-taskbar-client-icon-bg-active;
+      color: $clr-taskbar-client-icon-fg-active;
+    }
+    .client-title {
+      background-color: $clr-taskbar-client-title-bg-active;
+      color: $clr-taskbar-client-title-fg-active;
+    }
+  }
+  .client-icon {
+    padding: 0rem 0.3rem;
+    font-family: $font-icon;
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    background-color: $clr-taskbar-client-icon-bg;
+    color: $clr-taskbar-client-icon-fg;
+  }
+  .client-title {
+    min-width: 8em;
+    padding: 0rem 0.3rem;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    background-color: $clr-taskbar-client-title-bg;
+    color: $clr-taskbar-client-title-fg;
+  }
+}
+
+.exit-button {
+  .icon {
+    background-color: $clr-module-exit-button;
+  }
+  .label {
+    color: $clr-module-exit-button;
+  }
+}
+
+.clock {
+  .icon {
+    background-color: $clr-module-clock;
+  }
+  .label {
+    color: $clr-module-clock;
+  }
+}
+
+.network {
+  .icon {
+    background-color: $clr-module-network;
+  }
+  .label {
+    color: $clr-module-network;
+  }
+}
+
+.netstats {
+  .icon {
+    background-color: $clr-module-netstats;
+  }
+  .label {
+    color: $clr-module-netstats;
+  }
+}
+
+.volume {
+  .icon {
+    background-color: $clr-module-volume;
+  }
+  .label {
+    color: $clr-module-volume;
+  }
+}
+
+.systray {
+  .button {
+  }
+
+  .button-icon {
+    border-radius: $radius;
+    padding: 0rem 0.4rem;
+    min-width: 18px;
+    min-height: 18px;
+  }
+  .button-icon:hover {
+    background-color: $accent;
+    color: $bg;
+  }
+}

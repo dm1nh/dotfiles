@@ -1,0 +1,24 @@
+/config/*
+!/config/ags
+!/config/alacritty
+!/config/btop
+/config/btop/btop.log
+!/config/fish
+/config/fish/completions
+/config/fish/fish_variables
+!/config/fontconfig
+!/config/gtk-3.0
+/config/gtk-3.0/bookmarks
+!/config/gtk-4.0
+!/config/hypr
+!/config/imv
+!/config/nvim
+!/config/rofi
+!/config/sddm-astronaut-theme
+!/config/tmux
+!/config/zathura
+!/config/starship.toml
+--help
+
+# All logs
+*.log

@@ -11,7 +11,7 @@
 
 configuration {
   show-icons:                     false;
-  font:                           "JetBrainsMonoNL Nerd Font Regular 14";
+  font:                           "Jet Nerd Font Regular 14";
   disable-history:                false;
   sidebar-mode:                   false;
 }

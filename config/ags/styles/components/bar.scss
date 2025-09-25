@@ -33,13 +33,13 @@ window.Bar {
 
 .workspaces {
   .workspace-button {
-    min-height: 0.8rem;
-    min-width: 0.8rem;
+    min-height: 0.7rem;
+    min-width: 0.7rem;
     border-radius: 100px;
     background-color: $clr-ws-button-bg;
 
     &.active {
-      min-width: 1.2rem;
+      min-width: 1.4rem;
       background-color: $clr-ws-button-bg-active;
     }
 

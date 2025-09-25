@@ -38,7 +38,7 @@ function WsButton({ ws, ...props }: WsButtonProps) {
 
 function Workspaces() {
   return (
-    <box cssClasses={["workspaces"]} spacing={8}>
+    <box cssClasses={["workspaces"]} spacing={7}>
       {range(6).map((i) => (
         <WsButton ws={AstalHyprland.Workspace.dummy(i + 1, null)} />
       ))}

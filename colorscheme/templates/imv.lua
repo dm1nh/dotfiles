@@ -21,7 +21,7 @@ overlay = true
 overlay_text_color = ${fg}
 overlay_background_color = ${bg_dark}
 overlay_background_alpha = ff
-overlay_font = JetBrainsMonoNL Nerd Font Regular:16
+overlay_font = Jet Nerd Font Regular:16
 overlay_position_bottom = false
 
 # bindings

@@ -1,10 +1,10 @@
 local templates = {
 	"ags",
-	-- "alacritty",
+	"alacritty",
 	-- "awesome",
 	"btop",
 	"fish",
-	"foot",
+	-- "foot",
 	"hyprland",
 	"imv",
 	"rofi",

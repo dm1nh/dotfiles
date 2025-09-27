@@ -24,17 +24,13 @@ paru -Syy --noconfirm
 paru -Sy --noconfirm archlinux-keyring
 paru -S --noconfirm - <./pkgs.txt
 
-# Enable services
-# sudo systemctl enable sddm.service
-sudo systemctl enable rfkill-block@bluetooth.service # turn off bluetooth on startup
-
 # Create user directories
 xdg-user-dirs-update
 rm -rf ~/.local/share/{themes,fonts}
 mkdir -p ~/.local/share/{themes,fonts}
 
 # Copy fonts
-sudo cp -R ./fonts/{JetBrainsMonoNerdFont,Roboto,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
+sudo cp -R ./fonts/{JetNerdFont,Roboto,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
 fc-cache -r
 
 # Install sddm astronaut theme
@@ -72,7 +68,8 @@ curl -fsSL https://get.pnpm.io/install.sh | sh -
 sudo usermod -aG docker $USER
 
 # Enable systemctl services
-sudo systemctl enable docker
+sudo systemctl enable sddm.service
+sudo systemctl enable docker.service
 systemctl --user enable pipewire.service pipewire-pulse.service wireplumber.service
 systemctl --user --now enable wireplumber.service
 

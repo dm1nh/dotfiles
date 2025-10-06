@@ -43,8 +43,11 @@ lazygit
 libadwaita
 libastal-meta
 libnotify
+libva-mesa-driver
 luacheck
 man-db
+mesa
+mesa-vdpau
 neovim
 networkmanager
 net-tools

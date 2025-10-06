@@ -34,6 +34,13 @@ return {
 	-- 	},
 	-- },
 
+	{
+		"let-def/texpresso.vim",
+		keys = {
+			{ "<Leader>cx", "<cmd>TeXpresso expand('%:p')<cr>", desc = "Build texpresso", silent = true },
+		},
+	},
+
 	-- Correctly setup lspconfig for LaTeX 🚀
 	{
 		"neovim/nvim-lspconfig",

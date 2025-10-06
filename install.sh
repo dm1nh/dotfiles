@@ -70,6 +70,7 @@ sudo usermod -aG docker $USER
 # Enable systemctl services
 sudo systemctl enable sddm.service
 sudo systemctl enable docker.service
+sudo systemctl enable reflector.service
 systemctl --user enable pipewire.service pipewire-pulse.service wireplumber.service
 systemctl --user --now enable wireplumber.service
 

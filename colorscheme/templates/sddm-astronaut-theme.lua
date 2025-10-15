@@ -17,7 +17,7 @@ ScreenHeight="1080"
 ScreenPadding=""
 # Default 0, Options: from 0 to min(screen width/2,screen height/2). 
 
-Font="Jet Nerd Font"
+Font="JetBrainsMonoNL Nerd Font"
 FontSize="14"
 # Default is screen height divided by 80 (1080/80=13.5), Options: 0-inf.
 

@@ -9,7 +9,7 @@ overlay = true
 overlay_text_color = #d3c6aa
 overlay_background_color = #1e2428
 overlay_background_alpha = ff
-overlay_font = Jet Nerd Font Regular:16
+overlay_font = JetBrainsMonoNL Nerd Font Regular:16
 overlay_position_bottom = false
 
 # bindings

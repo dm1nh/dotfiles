@@ -39,7 +39,7 @@ sudo git clone -b master --depth 1 https://github.com/keyitdev/sddm-astronaut-th
 sudo cp -r ./misc/sddm.conf.d /etc/
 sudo cp ./misc/sddm-astronaut-theme/metadata.desktop /usr/share/sddm/themes/sddm-astronaut-theme/
 sudo cp ./config/sddm-astronaut-theme/theme.conf /usr/share/sddm/themes/sddm-astronaut-theme/Themes/
-sudo cp ./config/hypr/wallpapers/greet.png /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
+sudo cp ./config/hypr/wallpapers/greet.jpg /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
 
 # Fix function keys on apple keyboards or other machenical keyboards
 sudo cp -r ./misc/modprobe.d /etc/

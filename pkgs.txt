@@ -29,6 +29,7 @@ grim
 gtk3
 gtk4
 gvfs
+hpaper
 hypridle
 hyprland
 hyprlock

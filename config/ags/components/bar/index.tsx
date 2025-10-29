@@ -3,8 +3,8 @@ import { Astal, Gdk, Gtk } from "ags/gtk4"
 import { Clock } from "./clock"
 import { Workspaces } from "./workspaces"
 import { Volume } from "./volume"
-import { Network } from "./network"
-import { Netstats } from "./netstats"
+// import { Network } from "./network"
+// import { Netstats } from "./netstats"
 import { Systray } from "./systray"
 import { ExitButton } from "./exit-button"
 
@@ -25,11 +25,9 @@ export function Bar(gdkmonitor: Gdk.Monitor) {
         <box $type="start" halign={Gtk.Align.START} spacing={8}>
           <Workspaces />
         </box>
-        <box $type="end" halign={Gtk.Align.END} spacing={4}>
+        <box $type="end" halign={Gtk.Align.END} spacing={8}>
           <Systray />
           <Volume />
-          <Network />
-          <Netstats />
           <Clock />
           <ExitButton />
         </box>

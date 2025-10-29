@@ -5,11 +5,12 @@ get_date() {
 }
 
 mkdir -p ~/Pictures
+
 case $1 in
 --fullscreen)
-  grim - | swappy -f - -o '~/Pictures/screenshot_'"$(get_date)"'.mp4'
+  grim - | swappy -f - -o "~/Pictures/screenshot_(get_date).png"
   ;;
 --selection)
-  grim -g "$(slurp)" - | swappy -f - -o '~/Pictures/screenshot_'"$(get_date)"'.mp4'
+  grim -g "$(slurp)" - | swappy -f - -o "~/Pictures/screenshot_(get_date).png"
   ;;
 esac

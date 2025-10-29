@@ -1,3 +1,4 @@
+alacritty
 aylurs-gtk-shell-git
 base-devel
 bluez
@@ -78,12 +79,14 @@ socat
 starship
 stylua
 swappy
+tectonic
 tmux
 tree
 unzip
 vulkan-radeon
 wf-recorder
 wget
+wine
 wireplumber
 wl-clipboard
 wpa_supplicant
@@ -91,6 +94,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 xdg-utils
+xournalpp
 xp-pen-tablet
 zathura
 zathura-pdf-poppler

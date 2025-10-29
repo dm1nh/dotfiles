@@ -14,6 +14,7 @@
 !/config/hypr
 !/config/imv
 !/config/nvim
+/config/nvim/lazy-lock.json
 !/config/rofi
 !/config/sddm-astronaut-theme
 !/config/tmux

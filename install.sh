@@ -30,7 +30,7 @@ rm -rf ~/.local/share/{themes,fonts}
 mkdir -p ~/.local/share/{themes,fonts}
 
 # Copy fonts
-sudo cp -R ./fonts/{JetNerdFont,Roboto,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
+sudo cp -R ./fonts/{JetBrainsMonoNerdFont,Roboto,MaterialSymbols,NotoColorEmoji-Regular.ttf} /usr/share/fonts/
 fc-cache -r
 
 # Install sddm astronaut theme

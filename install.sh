@@ -77,4 +77,6 @@ systemctl --user --now enable wireplumber.service
 paru -Rns $(paru -Qdtq)
 paru -Scc --noconfirm
 
+xdg-user-dirs-update
+
 echo "Reboot to your system and Happy working!"

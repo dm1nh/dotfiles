@@ -26,6 +26,7 @@ git
 glfw
 gnu-netcat
 go
+gpu-screen-recorder
 grim
 gtk3
 gtk4
@@ -84,7 +85,6 @@ tmux
 tree
 unzip
 vulkan-radeon
-wf-recorder
 wget
 wine
 wireplumber
@@ -99,3 +99,4 @@ xp-pen-tablet
 zathura
 zathura-pdf-poppler
 vlc
+vlc-plugins-all

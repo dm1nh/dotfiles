@@ -97,47 +97,32 @@ quit() {
   esac
 }
 
-record() {
-  pid=$(pidof wf-recorder)
+screenrecord() {
+  theme="~/.config/rofi/screenrecord.rasi"
+  killall -q rofi
 
-  # TODO: How can I stop wf-recorder normally without damaging video file.
-  if [ -n "$pid" ]; then
-    notify-send "A recording instance has already running"
-  else
-    theme="~/.config/rofi/record.rasi"
-    killall -q rofi
+  # Options
+  sound=""
+  nosound=""
 
-    # Options
-    fullscreen_sound=""
-    fullscreen=""
-    sound=""
-    selection=""
+  # Variables passed to dmenu
+  opts="$sound\n$nosound"
 
-    # Variables passed to dmenu
-    opts="$fullscreen_sound\n$fullscreen\n$sound\n$selection"
+  opt=$(echo -e $opts | rofi -dmenu -p "gpu-recorder" -theme $theme)
 
-    opt=$(echo -e $opts | rofi -dmenu -p "wf-recorder" -theme $theme)
-
-    if [ -z $opt ]; then
-      exit 0
-    fi
-
-    case $opt in
-
-    $fullscreen_sound)
-      ~/.config/hypr/scripts/record.sh --fullscreen-sound
-      ;;
-    $fullscreen)
-      ~/.config/hypr/scripts/record.sh --fullscreen
-      ;;
-    $sound)
-      ~/.config/hypr/scripts/record.sh --sound
-      ;;
-    $selection)
-      ~/.config/hypr/scripts/record.sh
-      ;;
-    esac
+  if [ -z $opt ]; then
+    exit 0
   fi
+
+  case $opt in
+
+  $sound)
+    ~/.config/hypr/scripts/screenrecord.sh --sound
+    ;;
+  $nosound)
+    ~/.config/hypr/scripts/screenrecord.sh
+    ;;
+  esac
 }
 
 screenshot() {
@@ -197,7 +182,7 @@ case $1 in
 colorpicker) colorpicker ;;
 docs) docs ;;
 launcher) launcher ;;
-record) record ;;
+screenrecord) screenrecord ;;
 screenshot) screenshot ;;
 clients) clients ;;
 quit) quit ;;

@@ -35,7 +35,7 @@ return function(s)
   local taglist = awful.widget.taglist({
     screen = s,
     filter = awful.widget.taglist.filter.all,
-    layout = { layout = wibox.layout.fixed.horizontal, spacing = dpi(12) },
+    layout = { layout = wibox.layout.fixed.horizontal, spacing = dpi(8) },
     widget_template = {
       widget = wibox.container.margin,
       create_callback = function(self, c3, _)

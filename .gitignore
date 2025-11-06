@@ -1,6 +1,7 @@
 /config/*
 !/config/ags
 !/config/alacritty
+!/config/awesome
 !/config/btop
 /config/btop/btop.log
 !/config/fish

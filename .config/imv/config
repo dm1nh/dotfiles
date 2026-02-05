@@ -1,0 +1,18 @@
+# tokyonight for imv
+# ~/.config/imv/config
+
+# styling
+[options]
+background = #222436
+fullscreen = false
+overlay = true
+overlay_text_color = #c8d3f5
+overlay_background_color = #1e2030
+overlay_background_alpha = ff
+overlay_font = HollowNight Nerd Font Regular:14
+overlay_position_bottom = false
+
+# bindings
+[binds]
+j = next
+k = prev

@@ -1,0 +1,8 @@
+theme = dankcolors
+app-notifications = no-clipboard-copy,no-config-reload
+font-family = JetBrainsMonoNL Nerd Font
+font-size = 13
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+command = /usr/bin/fish --login --interactive

@@ -53,7 +53,7 @@
     (use-palette yes)
     (use-font no)
     (mode screen)
-    (axes 2 x y)
+    (axes 5 x y xtilt ytilt pressure)
     (keys 0)
     (pressure-curve
         (curve-type smooth)

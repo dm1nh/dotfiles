@@ -1,0 +1,22 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=0pt]{geometry} % Loại bỏ lề giấy
+\usepackage{tikz}
+
+\begin{document}
+\pagestyle{empty} % Xóa số trang
+
+\begin{tikzpicture}[remember picture, overlay]
+    % Vẽ lưới ô li 5mm toàn bộ trang
+    % Bạn có thể đổi màu từ gray!30 sang blue!15 nếu muốn màu xanh nhạt
+    \draw[step=0.2cm, blue!10, thin] (current page.south west) grid (current page.north east);
+    
+    % Vẽ lưới đậm 2.5cm (tương đương khổ 5x5 ô nhỏ)
+    \draw[step=0.8cm, blue!25, thin] (current page.south west) grid (current page.north east);
+
+    % Vẽ lề đỏ (cách mép trái 2.4cm - tương đương 3 ô lớn 0.8cm)
+    \draw[blue!40, very thick] ([xshift=2.12cm]current page.north west) -- ([xshift=2.12cm]current page.south west);
+    \draw[blue!40, very thick] ([xshift=18.92cm]current page.north west) -- ([xshift=18.92cm]current page.south west);
+
+\end{tikzpicture}
+
+\end{document}

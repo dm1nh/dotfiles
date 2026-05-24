@@ -46,12 +46,20 @@ input {
     focus-follows-mouse max-scroll-amount="0%"
 }
 
-	output "HDMI-A-1" {
-    // off
-    mode "1920x1080@100"
-    scale 1
-    transform "normal"
-    // position x=1280 y=0
+output "HDMI-A-1" {
+  // off
+  mode "1920x1080@100"
+  scale 1
+  transform "normal"
+  // position x=1280 y=0
+}
+
+output "DP-1" {
+  // off
+  mode "1920x1080@60"
+  scale 1
+  transform "normal"
+  // position x=1280 y=0
 }
 
 layout {
@@ -121,17 +129,13 @@ layout {
 environment {
 	QT_QPA_PLATFORMTHEME "gtk3"
 	QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+  DMS_DISABLE_MATUGEN "1"
+  DMS_DANKBAR_LAYER "overlay"
+  DMS_HIDE_TRAYIDS "discord,spotify"
 }
 
-spawn-at-startup "waybar"
-spawn-at-startup "mako"
-spawn-at-startup "nm-applet"
-spawn-at-startup "swayidle"
 spawn-at-startup "fcitx5"
-spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
 
-spawn-sh-at-startup "hpaper start"
-spawn-sh-at-startup "wlsunset -S 6:30 -s 20:00 -t 4500 -T 5000"
 spawn-sh-at-startup "QT_QPA_PLATFORM=xcb /usr/lib/pentablet/PenTablet.sh /mini"
 
 hotkey-overlay {
@@ -148,8 +152,15 @@ animations {
 }
 
 window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+    match app-id=r#"com.github.xournalpp.xournalpp"#
+    open-maximized true
+}
+
+window-rule {
+    match app-id=r#"^fx-580vn x emulator.exe$"#
+    open-floating true
+    default-floating-position x=1500 y=10 relative-to="bottom-left"
+    max-height 960
 }
 
 window-rule {
@@ -164,15 +175,9 @@ window-rule {
     block-out-from "screen-capture"
 }
 
-window-rule {
-		match app-id=r#"^zen$"#
-
-    block-out-from "screencast"
-}
-
 // Enable rounded corners for all windows.
 window-rule {
-    geometry-corner-radius 12
+    geometry-corner-radius 8
     clip-to-geometry true
 }
 
@@ -184,13 +189,16 @@ binds {
     Mod+W hotkey-overlay-title="Web browser" { spawn "firefox-developer-edition"; }
     Mod+E hotkey-overlay-title="File browser" { spawn "thunar"; }
     Mod+D hotkey-overlay-title="Apps launcher" { spawn-sh "dms ipc call spotlight toggle"; }
+    Mod+X hotkey-overlay-title="Notebook" { spawn-sh "xournalpp ~/.config/xournalpp/templates/background.pdf"; }
+    Mod+Z hotkey-overlay-title="Calculator" { spawn-sh "env 'WINEPREFIX=/dm1nh/.wine' wine 'C:\\\\users\\\\dm1nh\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\CASIO\\\\ClassWiz Emulator Subscription\\\\fx-580VN X Emulator.lnk'"; }
 
-    Mod+S hotkey-overlay-title="Screenshot" { screenshot; }
-	Mod+Shift+S hotkey-overlay-title="Screenshot menu" { spawn-sh "~/.config/niri/scripts/dmenu.sh screenshot"; }
-	Mod+Ctrl+S hotkey-overlay-title="Screenrecord menu" { spawn-sh "~/.config/niri/scripts/dmenu.sh screenrecord"; }
-	Mod+Shift+Q hotkey-overlay-title="Quit menu" { spawn-sh "dms ipc call powermenu toggle"; }
-	Mod+X hotkey-overlay-title="Pick color" { spawn-sh "dms color pick"; }
-	Super+Alt+L hotkey-overlay-title="Lock the screen" { spawn-sh "dms ipc call lock lock"; }
+    Mod+S hotkey-overlay-title="Screenshot" { spawn-sh "niri msg action screenshot --show-pointer=false"; }
+	  Mod+Shift+S hotkey-overlay-title="Screenshot menu" { spawn-sh "~/.config/niri/scripts/dmenu.sh screenshot"; }
+	  Mod+Ctrl+S hotkey-overlay-title="Screenrecord menu" { spawn-sh "~/.config/niri/scripts/dmenu.sh screenrecord"; }
+	  Mod+Shift+Q hotkey-overlay-title="Quit menu" { spawn-sh "dms ipc call powermenu toggle"; }
+	  Mod+P hotkey-overlay-title="Pick color" { spawn-sh "dms color pick"; }
+	  Super+Alt+L hotkey-overlay-title="Lock the screen" { spawn-sh "dms ipc call lock lock"; }
+    Mod+B hotkey-overlay-title="Bar" {spawn-sh "dms ipc call bar toggle index 0"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
